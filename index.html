@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Spotify Redesign by Lyndsay Criscitello
+        </title>
+        <link rel="stylesheet" href="https://use.typekit.net/klq4lnm.css">
+        <link rel="icon" type="image/x-icon" href="images/logo.svg">
+        <meta charset="UTF-8">
+    <style>
+* { 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+}
+
+h1 {
+color: #63CE69;
+    font-family: proxima-nova, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+}
+
+h2 {
+    font-family: proxima-nova, sans-serif;
+font-weight: 400;
+font-style: normal;
+color: #fff;
+}
+
+p {
+    font-family: proxima-nova, sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+li {
+    font-family: proxima-nova, sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 15pt;
+text-align: left;
+color: #63CE69;
+}
+
+body {
+        background-color: #2E2E2E;
+    }
+
+
+    nav {
+  top: 0%;
+  width: 100%;
+  position: absolute;
+}
+.container {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+.container ul li {
+    padding-top: 60px;
+  list-style: none;
+  margin: 0 10px;
+  display: inline-block;
+}
+.container ul li a:hover {
+  padding: 12px;
+  color: #63CE69;
+}
+.container ul li a {
+  margin: 8px;
+  padding: 30px;
+  color: #fff;
+  font-family: proxima-nova, sans-serif;
+  font-size: 15pt;
+font-weight: 400;
+font-style: normal;
+  transition: all 0.3s ease-out;
+}
+.active {
+  border-bottom: 2px solid #d0d7d9;
+}
+.container p{
+margin-bottom: 16px;
+color: #fff;
+font-weight: 700;
+font-size: 20px;
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: .5fr .3fr .3fr .5fr .3fr .3fr .38fr .38fr .1fr .1fr .77fr .2fr .2fr .5fr .7fr .5fr .5fr .2fr .4fr .3fr .6fr .3fr .4fr .2fr .5fr .5fr .4fr .4fr 1fr 1fr .2fr .2fr .4fr .4fr 0.6fr .5fr .5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+nav { grid-area: 1 / 1 / 2 / 7; }
+
+.head { grid-area: 2 / 1 / 4 / 7; }
+
+.title { grid-area: 4 / 1 / 6 / 7; }
+
+.intro { grid-area: 5 / 1 / 8 / 7; 
+    padding-left: 180px;
+    padding-right: 180px;
+    text-align: left;
+
+}
+
+.users { grid-area: 7 / 1 / 10 / 4; 
+    padding-left: 180px;
+    padding-right: 100px;
+    text-align: left;
+}
+
+section { grid-area: 7 / 4 / 10 / 7; 
+    padding-top: 40px;
+    text-align: left;
+}
+
+.analysis { grid-area: 9 / 1 / 12 / 4;
+    padding-top: 80px;
+    padding-left: 180px;
+    text-align: left;
+}
+
+.app1 { grid-area: 9 / 4 / 12 / 7; 
+    padding-top: 120px;
+}
+
+.app2 { grid-area: 12 / 1 / 15 / 7; 
+    padding-bottom: 20px;
+}
+
+.ur { grid-area: 15 / 1 / 17 / 7; 
+    padding-top: 30px;
+    padding-left: 180px;
+    padding-right: 180px;
+    text-align: left;
+}
+
+.form1 { grid-area: 17 / 1 / 19 / 4; 
+padding-left: 80px;
+padding-bottom: 100px;
+}
+
+.form2 { grid-area: 17 / 4 / 19 / 7; }
+
+.form { grid-area: 19 / 1 / 21 / 7; }
+
+.form3 { grid-area: 19 / 2 / 21 / 6; }
+
+.prbstmnt { grid-area: 21 / 1 / 23 / 7;
+padding-left: 180px;
+padding-right: 180px;
+text-align: left;
+}
+
+.desprob { grid-area: 23 / 1 / 25 / 7; 
+text-align: left;
+padding-left: 180px;
+padding-right: 60px;
+}
+
+.redesign { grid-area: 25 / 1 / 27 / 7;
+padding-left: 180px;
+padding-right: 60px;
+text-align: left;
+}
+
+.uf { grid-area: 27 / 1 / 30 / 7; }
+
+.wf { grid-area: 30 / 1 / 33 / 3; 
+    padding-left: 60px;
+padding-right: 60px;
+text-align: left;
+}
+
+.wf1 { grid-area: 30 / 3 / 33 / 5; }
+
+.wf2 { grid-area: 30 / 5 / 33 / 7; }
+
+.mu { grid-area: 33 / 1 / 36 / 3; 
+    padding-left: 60px;
+padding-right: 60px;
+text-align: left;
+    
+}
+
+.mu1 { grid-area: 33 / 3 / 36 / 5; }
+
+.mu2 { grid-area: 33 / 5 / 36 / 7; }
+
+.conclusion { grid-area: 36 / 1 / 40 / 7; 
+    padding-left: 180px;
+    padding-right: 180px;
+    text-align: left;
+}
+
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <nav> <ul>
+                <li><a id="sec-1" href="#intro">Introduction</a></li>
+                <li><a id="sec-2" href="#users">Users & Goals</a></li>
+                <li><a id="sec-3" href="#analysis">App Analysis</a></li>
+                <li><a id="sec-4" href="#ur">User Research</a></li>
+                <li><a id="sec-5" href="#desprob">Design Problem Statement</a></li>
+                <li><a id="sec-6" href="#redesign">Redesign</a></li>
+              </ul></nav>
+        
+            <div class="head">
+                <img src="images/spotlogo.png" alt="spotify logo">
+            </div>
+            <div class="title">
+                <h1>Redesigning the Social Feature in Spotify's Mobile App</h1>
+                <p> </p>
+                 <h2>By Lyndsay Criscitello</h2> 
+                <p> </p>
+                <p>September 4, 2022</p></div>
+            <div id="intro" class="intro">
+                <h1>Introduction</h1>
+                <p> </p>
+                <p>Spotify is a digital music, podcast, and video service that 
+                    gives users access to millions of songs and content from 
+                    creators all over the world. Created in 2006, it is currently one 
+                    of the largest music streaming platforms available, with over 433 
+                    million monthly active users, including 188 million paying subscribers, 
+                    as of June 2022. Spotify allows users to create playlists (individual or group), 
+                    follow other users, share content with other platforms, and even provides playlists 
+                    curated for them by AI. The primary function of this app, listening to music, podcasts, 
+                    etc., is done well in the app, but there are some features that deserve more attention. 
+                    The Spotify Social feature, which I am focusing on for this case study, includes User 
+                    Profiles and a Sidebar, only on Desktop, to view what your friends are listening to. </p>
+            </div>
+            <div id="users" class="users">
+                <h1>Defining Users and Goals</h1>
+        <p> </p>
+                <p>The users of the Spotify app come from all different 
+                    backgrounds, ages, countries, genders, etc., so it is 
+                    important that the app is catered to all walks of life. 
+                    For this group of users, I decided to survey men and women between the ages of 19-22  
+                    and 50-60 to get data from younger and older generations. The surveyed individuals are 
+                    all spotify premium users, but have had some experience with Soundcloud and Apple Music. 
+                    
+            </div>
+            <section>
+                <h2>Some goals of the users include the following: </h2> 
+                 <p> </p>
+                <ol>
+                <li>Searching for and locating songs, podcasts, videos, etc.
+                </li>
+                <li>Sharing songs/podcasts and playlists.
+                </li>
+                <li>Listening to songs and playlists.
+                </li>
+                <li>Creating playlists/blends.
+                </li>
+                <li>Seeing what other users are listening to</li>
+                <li>Searching for user profiles
+                </li>
+                <li>Discover new music, podcasts, artists, and playlists.
+                </li></ol>
+            </section>
+            <div id="analysis" class="analysis">
+                <h1>Application Analysis</h1>
+                    <p> </p>
+                    <p>The Spotify App has almost every feature a music-lover could want from a 
+                        streaming platform. Spotify uses an algorithm to suggest and create curated 
+                        playlists for users, in addition to offering company-created playlists. 
+                        Spotify also offers a small social feature – but not many users know about it. 
+                        On the desktop app, users can see what their friends are listening to and when 
+                        they were last active on the righthand side of the screen. On the mobile app, 
+                        this feature is not present, though users can view friends profiles and playlists 
+                        through the search bar or via their following list. Many users do not know this 
+                        feature exists, but it they did, it would change the way they interact with the 
+                        app.
+                    </p>
+            </div>
+            <div class="app1">
+                <img src="images/comp.png" alt="app1">
+            </div>
+            <div class="app2">
+                <img src="images/uf.png" alt="app2">
+            </div>
+            <div id="ur" class="ur">
+                <h1>User Research</h1>
+          <p> </p>
+          <p>The participants in this study were 25 male and female Spotify Premium 
+            users who’s ages ranged from 19-60 years-old. The users were surveyed via 
+            social media using a google form with 15 questions. When asked what spotify features
+        they use least, 71.4% of users said the social feature. When asked questions about spotify social features,
+    many users said that they had no idea it even existed, whereas about 10% of surveyed users said they had used 
+    the feature previously. When asked what features they wished Spotify Social had, users stated that they wished there
+    was a easier, centralized way to share music with friends in the app. Format-wise, users noted that
+    the desktop sidebar feature is convenient, but a feed-style format could be better for music-sharing. Most users main frustration
+    with the social feature was that it is not highlighted enough on the app, nor does it have a visually-appealing interface
+    design. More than 50% of users said they would be comfortable sharing information such as First and Last Name, Username, 
+    Pronouns, Top 5 Artists of the Month, Current Song Playing, Profile Biography, and Top 5 Songs of the Month. I was surprised to
+    see only 46.4% of users said they were comfortable with other users seeing their last active time, since this is already a feature of
+    Spotify Social. When asked how helpful an updated social feature for spotify would be, many users stated that they would use spotify regardless
+    of a social feature, but feel that it would help boost interaction within the Spotify community. I also asked if users thought "like" and "comment" 
+    features should be included, and while some users thought it could be an interesting idea, most users said that it would feel judgemental to have likes and
+    comments on their music taste. Users also noted that a Direct Messaging system should not be included, but a feed to post playlists to, should be.
+
+ </p>
+            </div>
+            <div class="form1">
+                <img src="images/graph1.png" alt="graph1">
+            </div>
+            <div class="form2">
+                <img src="images/graph2.png" alt="">
+            </div>
+            <div class="form"></div>
+            <div class="form3">
+                <img src="images/graph3.png" alt="graph3">
+            </div>
+            <div id="prbstmnt" class="prbstmnt">
+                <h1>Design Problem Statement</h1>
+            <p> </p>
+            <h2>Pain Point #1: Social Feature Visibility</h2>
+            <p> As backed by my research, most users main frustration with the social feature was that it
+                 is not highlighted enough on the app, nor does it have a visually-appealing interface
+                design. Surveyed users said the social feature is "hard to find" and has minimal functionality.
+            </p>
+            <p> </p>
+            <h2>Pain Point #2: Sharing Capabilities </h2>
+            <p>When asked what features they think a Spotify Social feature should have, users noted that there weren't 
+                many options to share music/playlists within the app. It was suggested by several users, that a feed 
+                where users can post songs and playlisys would remedy this pain point.
+            </p>
+            <p> </p>
+            <h2>Pain Point #3: Finding Friends/Profiles </h2>
+            <p>Users also stated that they struggle to find friends' profiles. One user said she struggles to find other users
+                even when she types their username into the search bar. Users noted that the Spotify Social feature would be improved by making it 
+                easier to find friends and discover other users.
+            </p>
+            </div>
+            <div id="desprob" class="desprob">
+                <h1>The Design Problem</h1>
+            <p>All three pain points can be successfully remedied through 
+                my redesign. However, as proven by my research, visibility, 
+                sharing capabilities, and finding friends, are critical 
+                factors that influence the use of the social feature. 
+                The main problem is the visibility of the features, 
+                since many users (54%) did not know the social feature 
+                existed. With a highly visible social feature, 
+                71% of users said they would use it to share 
+                playlists with friends (in a feed-style approach) 
+                and find new music through what friends are listening to. 
+                It was highly agreed upon amongst 79.4% of users that the 
+                social feature should not include a direct messaging 
+                system or capabilities to “Like” or “Comment” on what a 
+                user is listening to.</p>
+            <p> </p>
+            <h2>This leads us to our Design Question: </h2>
+            <p>How might we improve the experience of Spotify Users utilizing 
+            the social feature in the Canvas app?</p>
+            </div>
+            <div id="redesign" class="redesign">
+                <h1>The Redesign</h1>
+            <p>During my user research, I asked students how they would 
+                change the Spotify Social Feature in order to improve 
+                their overall experience. I received many responses to 
+                this question stating that users have never used the 
+                social feature and some did not know it existed. 
+                However, 46% of users stated they had used the feature, 
+                and noted that increased visibility, sharing capabilities, 
+                and a new interface design, would boost the app’s overall 
+                interactability and user experience.
+            </p>
+            <p> </p>
+            <h1>The Design Solution</h1>
+            <p>To solve this design problem, there should be a tab on the 
+                main navigation that takes users to the social feature. 
+                This would solve the visibility problem and would provide 
+                a fast way of getting to  the social feature. In addition, 
+                shared playlists and current listening status will be 
+                found in a feed-style layout. Users can share playlists 
+                and what they’re listening to with everyone, or just a 
+                few of their friends on the social feed. There will 
+                also be an option within the feature to sync your 
+                contacts so users can easily find their friends in one 
+                place.
+            </p>
+            <p> </p>
+            <h1>User Flows</h1>
+            <p>I created these user flows in an attempt to see and simplify 
+                what interactions users will take. I created two user flows, 
+                one to show how users can find the social feature, and another 
+                to find friends in the Spotify app.
+            </p>
+            </div>
+            <div class="uf">
+                <img src="images/uf1.png" alt="uf1">
+                <p> </p>
+                <img src="images/uf2.png" alt="uf2">
+            </div>
+            <div class="wf">
+                <h1>Wireframes</h1>
+                <p>After establishing the flow of the new design, 
+                    I realized which sections of the Spotify app need to be updated. I 
+                    created two wireframes to understand and plan the basic framework of 
+                    the design for the new sections.</p>
+            </div>
+            <div class="wf1">
+                <img src="images/wf1.png" alt="wf1">
+            </div>
+            <div class="wf2">
+                <img src="images/wf2.png" alt="wf2">
+            </div>
+            <div class="mu">
+                <h1>Mockups</h1>
+                <p>Finally, I made all suggested changes to a final mockup of what the 
+                    social feature will look like with the redesign added.</p>
+            </div>
+            <div class="mu1">
+                <img src="images/mu1.png" alt="mu1">
+            </div>
+            <div class="mu2">
+                <img src="images/mu2.png" alt="mu2">
+            </div>
+            <div class="conclusion">
+                <h1>Conclusion</h1>
+                <p> </p>
+                <p>It was very interesting to me how not only had most users
+                     not used the Spotify Social feature, but most users 
+                     did not know it even existed. 12.2% of users stated 
+                     they hadn’t used the feature, while 53.7% of users 
+                     said they had no idea this feature existed. In the 
+                     future, I hope to test my solution to see if it really 
+                     would improve the experience of spotify users 
+                     interacting within the app. This project helped me 
+                     practice and hone my prototyping and wireframing 
+                     skills as well as critical thinking skills during 
+                     the user research stage. This app redesign made me 
+                     realize how important Product/UX Design is, for even 
+                     the smallest features.
+                </p>
+            </div>
+          </div>
+    </body>
+</html>
